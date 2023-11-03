@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Temporizador moderno pomodoro">
+
+  <title>Focus Timer 2.0 - Pomodoro</title>
+
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script type="module" src="src/main.js"> defer</script>
+  
+</head>
+
+<body>
+  <div class="app">
+    
+    <button id="toggle-mode-app">
+      <span class="sr-only">Ativar/Desativar Light Mode</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon"></i>
+    </button>
+
+    <div id="timer-app">
+    <section id="timer">
+      <span id="minutes">00</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+    </section>
+    <section id="controls" class="controls-flex">
+      <button data-action="toggleRunning"
+      class="ph ph-play-circle"> <span class="sr-only">Iniciar contador</span>
+    </button>
+      <button data-action="toggleRunning" 
+      class="ph ph-pause-circle"> <span class="sr-only">Pausar contador</span>
+    </button>
+        <button data-action="Stop" 
+      class="ph ph-stop-circle"> <span class="sr-only">Pausar contador</span>
+    </button>
+      <button data-action="addTime"
+      class="ph ph-plus-circle"> <span class="sr-only">Ajustar contador</span>
+    </button>
+      <button data-action="subTime"
+      class="ph ph-minus-circle"> <span class="sr-only">Iniciar música</span>
+    </button>
+    </section>
+    </div>
+    
+  <nav id="sounds-app">
+    <div class="row">
+      <button data-action="floresta" class="sound-button sound1">
+          <img id="floresta-icon" src="./assets/card1.svg">
+      </button> 
+      <button data-action="chuva" class="sound-button sound2">
+          <img id="chuva-icon"src="./assets/card2.svg">
+      </button>
+  </div>
+
+  <div class="row">
+      <button data-action="cafeteria" class="sound-button sound3">
+          <img id="cafeteria-icon" src="./assets/card3.svg">
+      </button>
+      <button data-action="lareira" class="sound-button sound4">
+          <img id="lareira-icon" src="./assets/card4.svg">
+      </button>
+  </div>
+  </nav>
+  
+    
+  </div>
+</body>
+
+</html>
